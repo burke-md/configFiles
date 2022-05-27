@@ -29,9 +29,17 @@ if has("persistent_undo")
   set undofile
 endif
 
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+
 call plug#begin()
 Plug 'gruvbox-community/gruvbox'
 Plug 'mbbill/undotree'
+Plug 'tomlion/vim-solidity'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'fatih/vim-go', { 'do': ':GoIntallBinaries' }
 call plug#end()
 
 colorscheme gruvbox
